@@ -18,13 +18,24 @@
     --accent-ink: #ffffff;
     --accent-soft: rgba(15,118,110,0.12);
     --series-cost: #2a78d6;
-    --series-revenue: #008300;
-    --series-peak: #eb6834;
-    --series-offpeak: #4a3aa7;
+    --series-revenue: #0f8a5f;
+    --series-peak: #e8702f;
+    --series-offpeak: #5b4fcf;
     --status-good: #0ca30c;
     --status-critical: #d03b3b;
     --grid-line: #e1e0d9;
     --shadow: 0 1px 2px rgba(16,32,29,0.06), 0 8px 24px rgba(16,32,29,0.05);
+    --hero-bg: #10201d;
+    --hero-text: #f3f7f5;
+    --hero-dim: rgba(255,255,255,0.62);
+    --hero-accent: #6ee7b7;
+    --hero-accent-soft: rgba(110,231,183,0.14);
+    --badge-auto-bg: rgba(37,99,235,0.1);
+    --badge-auto-ink: #2563eb;
+    --badge-manual-bg: rgba(16,32,29,0.08);
+    --badge-manual-ink: #52635d;
+    --badge-recon-bg: rgba(124,58,237,0.1);
+    --badge-recon-ink: #7c3aed;
   }
   @media (prefers-color-scheme: dark) {
     :root:where(:not([data-theme="light"])) {
@@ -47,75 +58,77 @@
       --status-critical: #e66767;
       --grid-line: #263531;
       --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+      --hero-bg: #17221f;
+      --hero-text: #eef3f1;
+      --hero-dim: #9fada8;
+      --hero-accent: #2dd4bf;
+      --hero-accent-soft: rgba(45,212,191,0.14);
+      --badge-auto-bg: rgba(57,135,229,0.16);
+      --badge-auto-ink: #7fb4f2;
+      --badge-manual-bg: rgba(255,255,255,0.1);
+      --badge-manual-ink: #b7c3bf;
+      --badge-recon-bg: rgba(144,133,233,0.18);
+      --badge-recon-ink: #b4a9f2;
     }
   }
   :root[data-theme="dark"] {
     color-scheme: dark;
-    --bg-page: #0b1412;
-    --bg-surface: #121c1a;
-    --bg-surface-2: #17221f;
-    --text-primary: #eef3f1;
-    --text-secondary: #b7c3bf;
-    --text-muted: #7c8985;
-    --border: rgba(255,255,255,0.12);
-    --accent: #2dd4bf;
-    --accent-ink: #062723;
-    --accent-soft: rgba(45,212,191,0.16);
-    --series-cost: #3987e5;
-    --series-revenue: #22c55e;
-    --series-peak: #d95926;
-    --series-offpeak: #9085e9;
-    --status-good: #34d15c;
-    --status-critical: #e66767;
-    --grid-line: #263531;
+    --bg-page: #0b1412; --bg-surface: #121c1a; --bg-surface-2: #17221f;
+    --text-primary: #eef3f1; --text-secondary: #b7c3bf; --text-muted: #7c8985;
+    --border: rgba(255,255,255,0.12); --accent: #2dd4bf; --accent-ink: #062723;
+    --accent-soft: rgba(45,212,191,0.16); --series-cost: #3987e5; --series-revenue: #22c55e;
+    --series-peak: #d95926; --series-offpeak: #9085e9; --status-good: #34d15c;
+    --status-critical: #e66767; --grid-line: #263531;
     --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    --hero-bg: #17221f; --hero-text: #eef3f1; --hero-dim: #9fada8;
+    --hero-accent: #2dd4bf; --hero-accent-soft: rgba(45,212,191,0.14);
+    --badge-auto-bg: rgba(57,135,229,0.16); --badge-auto-ink: #7fb4f2;
+    --badge-manual-bg: rgba(255,255,255,0.1); --badge-manual-ink: #b7c3bf;
+    --badge-recon-bg: rgba(144,133,233,0.18); --badge-recon-ink: #b4a9f2;
   }
   :root[data-theme="light"] {
     color-scheme: light;
-    --bg-page: #eef2f0;
-    --bg-surface: #ffffff;
-    --bg-surface-2: #e7ece9;
-    --text-primary: #10201d;
-    --text-secondary: #4c5c57;
-    --text-muted: #8a948f;
-    --border: rgba(16,32,29,0.12);
-    --accent: #0f766e;
-    --accent-ink: #ffffff;
-    --accent-soft: rgba(15,118,110,0.12);
-    --series-cost: #2a78d6;
-    --series-revenue: #008300;
-    --series-peak: #eb6834;
-    --series-offpeak: #4a3aa7;
-    --status-good: #0ca30c;
-    --status-critical: #d03b3b;
-    --grid-line: #e1e0d9;
+    --bg-page: #eef2f0; --bg-surface: #ffffff; --bg-surface-2: #e7ece9;
+    --text-primary: #10201d; --text-secondary: #4c5c57; --text-muted: #8a948f;
+    --border: rgba(16,32,29,0.12); --accent: #0f766e; --accent-ink: #ffffff;
+    --accent-soft: rgba(15,118,110,0.12); --series-cost: #2a78d6; --series-revenue: #0f8a5f;
+    --series-peak: #e8702f; --series-offpeak: #5b4fcf; --status-good: #0ca30c;
+    --status-critical: #d03b3b; --grid-line: #e1e0d9;
     --shadow: 0 1px 2px rgba(16,32,29,0.06), 0 8px 24px rgba(16,32,29,0.05);
+    --hero-bg: #10201d; --hero-text: #f3f7f5; --hero-dim: rgba(255,255,255,0.62);
+    --hero-accent: #6ee7b7; --hero-accent-soft: rgba(110,231,183,0.14);
+    --badge-auto-bg: rgba(37,99,235,0.1); --badge-auto-ink: #2563eb;
+    --badge-manual-bg: rgba(16,32,29,0.08); --badge-manual-ink: #52635d;
+    --badge-recon-bg: rgba(124,58,237,0.1); --badge-recon-ink: #7c3aed;
   }
 
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
   body {
     background: var(--bg-page);
     color: var(--text-primary);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
+  button { font-family: inherit; }
   .app {
     max-width: 1080px;
     margin: 0 auto;
     padding: 28px 20px 64px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
   }
   @media (prefers-reduced-motion: no-preference) {
     .card { transition: box-shadow .15s ease; }
+    .chevron { transition: transform .15s ease; }
   }
 
   /* ---------- Header ---------- */
   header.top {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     gap: 12px;
     flex-wrap: wrap;
@@ -131,16 +144,26 @@
     color: var(--text-secondary);
     font-size: 13.5px;
   }
-  .meter-badge {
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 11px;
-    letter-spacing: .04em;
-    color: var(--text-muted);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 4px 8px;
-    background: var(--bg-surface);
+  header.top .header-actions { display: flex; align-items: center; gap: 8px; }
+  .sync-badge {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 12px; color: var(--text-muted);
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 6px 11px; background: var(--bg-surface);
+    white-space: nowrap;
   }
+  .sync-badge svg { flex-shrink: 0; }
+  .icon-btn {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 12.5px; font-weight: 600;
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 7px 12px; background: var(--bg-surface); color: var(--text-primary);
+    cursor: pointer;
+  }
+  .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .icon-btn:disabled { opacity: .6; cursor: default; }
+  .icon-btn.spinning svg { animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
 
   .card {
     background: var(--bg-surface);
@@ -149,25 +172,47 @@
     box-shadow: var(--shadow);
   }
 
-  /* ---------- Control deck ---------- */
-  .control-deck {
-    padding: 18px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  /* ---------- Toolbar ---------- */
+  .toolbar { padding: 12px 16px; }
+  .toolbar-row {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 12px; flex-wrap: wrap;
   }
-  .deck-row {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    align-items: flex-end;
+  .segmented {
+    display: flex; gap: 4px; background: var(--bg-surface-2);
+    padding: 3px; border-radius: 10px; border: 1px solid var(--border);
+  }
+  .segmented button {
+    border: none; background: transparent; color: var(--text-secondary);
+    font-size: 12.5px; padding: 7px 12px; border-radius: 8px;
+    cursor: pointer; font-family: inherit;
+  }
+  .segmented button.active { background: var(--accent); color: var(--accent-ink); font-weight: 700; }
+  .toolbar-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .range-inputs { display: flex; align-items: center; gap: 6px; }
+  .range-inputs input[type="date"] {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 12px; padding: 6px 7px; border-radius: 7px;
+    border: 1px solid var(--border); background: var(--bg-surface-2); color: var(--text-primary);
+  }
+  .range-inputs .sep { color: var(--text-muted); font-size: 12px; }
+  .settings-toggle {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 12.5px; font-weight: 600;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 7px 12px; background: var(--bg-surface-2); color: var(--text-primary);
+    cursor: pointer;
+  }
+  .settings-toggle.unset { color: var(--status-critical); border-color: var(--status-critical); }
+  .settings-toggle[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+
+  .settings-panel {
+    margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border);
+    display: flex; gap: 22px; flex-wrap: wrap; align-items: flex-end;
   }
   .field-group { display: flex; flex-direction: column; gap: 6px; }
   .field-group label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    color: var(--text-muted);
+    font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted);
   }
   .field-group input[type="number"],
   .field-group input[type="date"],
@@ -175,135 +220,79 @@
   .field-group input[type="text"] {
     font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     font-variant-numeric: tabular-nums;
-    font-size: 14px;
-    padding: 7px 9px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--bg-surface-2);
-    color: var(--text-primary);
-    width: 128px;
+    font-size: 14px; padding: 7px 9px; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--bg-surface-2); color: var(--text-primary);
+    width: 110px;
   }
   .field-group input[type="text"] { font-family: inherit; width: 200px; }
-  .field-group input:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 1px;
-  }
-  .tariff-euro { position: relative; }
-  .rule-note {
-    font-size: 12px;
-    color: var(--text-muted);
-    max-width: 60ch;
-    line-height: 1.5;
-  }
+  .field-group input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .rule-note { font-size: 12px; color: var(--text-muted); max-width: 42ch; line-height: 1.5; margin: 0; }
   .rule-note b { color: var(--text-secondary); font-weight: 600; }
 
-  .period-row {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    align-items: center;
-    border-top: 1px solid var(--border);
-    padding-top: 14px;
+  /* ---------- Hero row ---------- */
+  .hero-row { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 12px; }
+  @media (max-width: 760px) { .hero-row { grid-template-columns: 1fr; } }
+  .hero-card {
+    background: var(--hero-bg); color: var(--hero-text);
+    border-radius: 14px; padding: 20px 22px;
+    display: flex; flex-direction: column; gap: 10px; justify-content: space-between;
   }
-  .segmented {
-    display: flex;
-    gap: 4px;
-    background: var(--bg-surface-2);
-    padding: 3px;
-    border-radius: 9px;
-    border: 1px solid var(--border);
+  .hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap; }
+  .hero-label { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--hero-dim); }
+  .hero-trend {
+    display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700;
+    color: var(--hero-accent); background: var(--hero-accent-soft);
+    padding: 3px 9px; border-radius: 999px; white-space: nowrap;
   }
-  .segmented button {
-    border: none;
-    background: transparent;
-    color: var(--text-secondary);
-    font-size: 12.5px;
-    padding: 6px 11px;
-    border-radius: 7px;
-    cursor: pointer;
-    font-family: inherit;
-  }
-  .segmented button.active {
-    background: var(--accent);
-    color: var(--accent-ink);
-    font-weight: 600;
-  }
-  .period-row input[type="date"] {
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 12.5px;
-    padding: 6px 8px;
-    border-radius: 7px;
-    border: 1px solid var(--border);
-    background: var(--bg-surface-2);
-    color: var(--text-primary);
-  }
-  .period-row .sep { color: var(--text-muted); font-size: 12px; }
+  .hero-trend.down { color: #f0a3a3; background: rgba(240,163,163,0.14); }
+  .hero-value { font-size: 38px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: var(--hero-accent); }
+  .hero-sub { display: flex; gap: 16px; font-size: 12px; color: var(--hero-dim); flex-wrap: wrap; }
+  .hero-sub b { color: var(--hero-text); }
 
-  /* ---------- Stat tiles ---------- */
-  .stat-row {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
+  .stat-card-sm {
+    padding: 16px 18px; display: flex; flex-direction: column; gap: 7px; justify-content: center;
   }
-  @media (max-width: 900px) { .stat-row { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 520px) { .stat-row { grid-template-columns: repeat(2, 1fr); } }
-  .stat-tile {
-    padding: 14px 14px 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .stat-tile .stat-label {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 10.5px;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    color: var(--text-muted);
+  .stat-card-sm .stat-label {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted);
   }
   .swatch { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
-  .stat-tile .stat-value {
+  .stat-card-sm .stat-value {
     font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-variant-numeric: tabular-nums;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-variant-numeric: tabular-nums; font-size: 21px; font-weight: 700; letter-spacing: -0.01em;
   }
-  .stat-tile .stat-sub {
-    font-size: 11.5px;
-    color: var(--text-muted);
-    font-variant-numeric: tabular-nums;
-  }
-  .stat-tile .split-bar {
-    height: 5px;
-    border-radius: 3px;
-    overflow: hidden;
-    display: flex;
-    background: var(--bg-surface-2);
-  }
+  .stat-card-sm .stat-sub { font-size: 11.5px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+  /* ---------- Tertiary row ---------- */
+  .tert-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 760px) { .tert-row { grid-template-columns: 1fr; } }
+  .tert-row .card { padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .tert-row .stat-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); }
+  .tert-row .stat-value { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; font-size: 17px; font-weight: 700; }
+  .tert-row .stat-sub { font-size: 11.5px; color: var(--text-muted); }
+  .split-pct-row { display: flex; justify-content: space-between; font-size: 12px; font-variant-numeric: tabular-nums; }
+  .split-bar { height: 6px; border-radius: 3px; overflow: hidden; display: flex; background: var(--bg-surface-2); }
 
   /* ---------- Chart ---------- */
   .chart-card { padding: 18px 20px 14px; }
   .chart-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-    gap: 8px;
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px; flex-wrap: wrap; gap: 8px;
   }
   .chart-head h2 { font-size: 14px; margin: 0; }
   .legend { display: flex; gap: 14px; }
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
-  .chart-scroll { overflow-x: auto; }
+  .legend-dash { width: 14px; height: 2px; background: var(--text-primary); display: inline-block; }
+  .chart-body { display: flex; gap: 8px; }
+  .chart-axis {
+    display: flex; flex-direction: column; justify-content: space-between;
+    height: 140px; padding-bottom: 22px; font-size: 10.5px; color: var(--text-muted);
+    text-align: right; min-width: 32px;
+  }
+  .chart-scroll { overflow-x: auto; flex: 1; }
   .chart-plot {
-    display: flex;
-    align-items: flex-end;
-    gap: 18px;
-    min-height: 160px;
-    padding: 4px 4px 0;
-    position: relative;
+    display: flex; align-items: flex-end; gap: 18px; min-height: 162px;
+    padding: 0 4px 0; position: relative;
     background-image: repeating-linear-gradient(to top, var(--grid-line) 0, var(--grid-line) 1px, transparent 1px, transparent 25%);
   }
   .month-group { display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 46px; }
@@ -311,122 +300,86 @@
   .bar { width: 14px; border-radius: 3px 3px 1px 1px; min-height: 2px; }
   .bar.cost { background: var(--series-cost); }
   .bar.revenue { background: var(--series-revenue); }
-  .month-net { font-size: 10.5px; font-variant-numeric: tabular-nums; }
+  .month-net { font-size: 10.5px; font-variant-numeric: tabular-nums; font-weight: 600; }
   .month-label { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+  .month-group.current .month-label { color: var(--text-primary); font-weight: 700; }
   .empty-note { color: var(--text-muted); font-size: 13px; padding: 20px 4px; }
 
   /* ---------- Table card ---------- */
   .table-card { padding: 18px 20px 20px; }
   .table-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 10px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px; margin-bottom: 10px;
   }
   .table-head h2 { font-size: 14px; margin: 0; }
+  .table-head h2 .count { font-weight: 500; color: var(--text-muted); }
   .ghost-btn {
-    font-family: inherit;
-    font-size: 12.5px;
-    padding: 7px 12px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--bg-surface-2);
-    color: var(--text-secondary);
+    font-family: inherit; font-size: 12.5px; padding: 7px 12px; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--bg-surface-2); color: var(--text-secondary);
     cursor: pointer;
   }
   .ghost-btn:hover { border-color: var(--accent); color: var(--accent); }
   .ghost-btn:disabled { opacity: .6; cursor: default; }
-  .refresh-group { display: flex; align-items: center; gap: 8px; }
-  .refresh-status { font-size: 12px; color: var(--text-muted); }
-  .refresh-status.ok { color: var(--status-good); }
-  .refresh-status.err { color: var(--status-critical); }
   .primary-btn {
-    font-family: inherit;
-    font-size: 12.5px;
-    font-weight: 600;
-    padding: 7px 14px;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    background: var(--accent);
-    color: var(--accent-ink);
-    cursor: pointer;
+    font-family: inherit; font-size: 12.5px; font-weight: 600; padding: 8px 14px;
+    border-radius: 8px; border: 1px solid transparent; background: var(--accent); color: var(--accent-ink);
+    cursor: pointer; display: flex; align-items: center; gap: 6px;
   }
   .primary-btn:hover { filter: brightness(1.05); }
 
   .add-form {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    padding: 12px;
-    margin-bottom: 14px;
-    background: var(--bg-surface-2);
-    border-radius: 10px;
-    border: 1px solid var(--border);
+    display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end;
+    padding: 12px; margin-bottom: 14px; background: var(--bg-surface-2);
+    border-radius: 10px; border: 1px solid var(--border);
   }
-  .add-form .field-group input { width: 118px; }
-  .add-form .field-group.note input { width: 180px; }
+  .add-form .field-group input { width: 110px; }
+  .add-form .field-group.note { flex: 1; min-width: 160px; }
+  .add-form .field-group.note input { width: 100%; }
 
   .table-scroll { overflow-x: auto; }
   table { border-collapse: collapse; width: 100%; font-size: 13px; }
   thead th {
-    text-align: right;
-    font-size: 10.5px;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    color: var(--text-muted);
-    font-weight: 600;
-    padding: 6px 10px;
-    border-bottom: 1px solid var(--border);
-    white-space: nowrap;
+    text-align: right; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em;
+    color: var(--text-muted); font-weight: 600; padding: 6px 10px;
+    border-bottom: 1px solid var(--border); white-space: nowrap;
   }
   thead th.left, tbody td.left { text-align: left; }
   tbody td {
-    padding: 8px 10px;
-    text-align: right;
-    border-bottom: 1px solid var(--grid-line);
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
+    padding: 9px 10px; text-align: right; border-bottom: 1px solid var(--grid-line);
+    font-variant-numeric: tabular-nums; white-space: nowrap;
   }
   tbody tr:hover { background: var(--bg-surface-2); }
-  tbody td.note { color: var(--text-secondary); text-align: left; white-space: normal; font-variant-numeric: normal; }
+  .time-cell .duration { display: block; font-size: 11px; color: var(--text-muted); font-weight: 400; }
+  .split-cell { display: flex; align-items: center; gap: 7px; min-width: 130px; }
+  .split-cell .split-bar { flex: 1; min-width: 50px; }
+  .split-cell .split-pct { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+  .badge {
+    display: inline-flex; align-items: center; font-size: 11px; font-weight: 600;
+    padding: 3px 9px; border-radius: 999px; cursor: default;
+  }
+  .badge.auto { background: var(--badge-auto-bg); color: var(--badge-auto-ink); }
+  .badge.manual { background: var(--badge-manual-bg); color: var(--badge-manual-ink); }
+  .badge.reconstructed { background: var(--badge-recon-bg); color: var(--badge-recon-ink); }
   .del-btn {
-    border: none;
-    background: none;
-    color: var(--text-muted);
-    cursor: pointer;
-    font-size: 13px;
-    padding: 2px 6px;
-    border-radius: 6px;
+    border: none; background: none; color: var(--text-muted); cursor: pointer;
+    font-size: 13px; padding: 2px 6px; border-radius: 6px;
   }
   .del-btn:hover { color: var(--status-critical); background: var(--bg-surface-2); }
   .good { color: var(--status-good); }
   .critical { color: var(--status-critical); }
+  .show-more-btn {
+    margin-top: 12px; font-size: 12.5px; font-weight: 600; color: var(--accent);
+    background: none; border: none; padding: 4px 0; cursor: pointer;
+  }
   .undo-toast {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--text-primary);
-    color: var(--bg-surface);
-    padding: 9px 16px;
-    border-radius: 9px;
-    font-size: 13px;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    box-shadow: var(--shadow);
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    background: var(--text-primary); color: var(--bg-surface);
+    padding: 9px 16px; border-radius: 9px; font-size: 13px;
+    display: flex; gap: 12px; align-items: center; box-shadow: var(--shadow);
   }
   .undo-toast button {
-    background: none;
-    border: none;
-    color: var(--accent);
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 13px;
-    font-family: inherit;
+    background: none; border: none; color: var(--accent); font-weight: 600; cursor: pointer;
+    font-size: 13px; font-family: inherit;
   }
   .help-text { font-size: 11.5px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
 </style>
@@ -438,11 +391,41 @@
       <h1>EV Laaddashboard</h1>
       <p>Alfen Eve Single S-Line — kosten vs. leasevergoeding per periode</p>
     </div>
-    <div class="meter-badge">METER READING · kWh</div>
+    <div class="header-actions">
+      <div class="sync-badge" id="sync-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span id="sync-label">Laden…</span>
+      </div>
+      <button class="icon-btn" id="reload-btn" aria-label="Sessies verversen">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+        Ververs
+      </button>
+    </div>
   </header>
 
-  <section class="card control-deck">
-    <div class="deck-row">
+  <section class="card toolbar">
+    <div class="toolbar-row">
+      <div class="segmented" id="preset-buttons">
+        <button data-preset="month">Deze maand</button>
+        <button data-preset="lastmonth">Vorige maand</button>
+        <button data-preset="year">Dit jaar</button>
+        <button data-preset="all">Alles</button>
+      </div>
+      <div class="toolbar-right">
+        <div class="range-inputs">
+          <input type="date" id="range-start" aria-label="Periode vanaf">
+          <span class="sep">t/m</span>
+          <input type="date" id="range-end" aria-label="Periode tot en met">
+        </div>
+        <button class="settings-toggle" id="settings-toggle" aria-expanded="false" aria-controls="settings-panel">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span id="settings-summary">Tarieven</span>
+          <svg class="chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="settings-panel" id="settings-panel" hidden>
       <div class="field-group">
         <label for="rate-peak">Piektarief €/kWh</label>
         <input id="rate-peak" type="number" step="0.0001" min="0" placeholder="0,00">
@@ -457,21 +440,11 @@
       </div>
       <p class="rule-note"><b>Piek:</b> ma–do 07:00–21:00 en vr 07:00–23:00. <b>Dal:</b> overige tijden, inclusief het hele weekend (vr 23:00 – ma 07:00).</p>
     </div>
-    <div class="period-row">
-      <div class="segmented" id="preset-buttons">
-        <button data-preset="month">Deze maand</button>
-        <button data-preset="lastmonth">Vorige maand</button>
-        <button data-preset="year">Dit jaar</button>
-        <button data-preset="all">Alles</button>
-      </div>
-      <span class="sep">van</span>
-      <input type="date" id="range-start">
-      <span class="sep">t/m</span>
-      <input type="date" id="range-end">
-    </div>
   </section>
 
-  <section class="stat-row" id="stat-row"></section>
+  <section class="hero-row" id="hero-row"></section>
+
+  <section class="tert-row" id="tert-row"></section>
 
   <section class="card chart-card">
     <div class="chart-head">
@@ -479,23 +452,22 @@
       <div class="legend">
         <span class="legend-item"><span class="swatch" style="background:var(--series-cost)"></span>Kosten</span>
         <span class="legend-item"><span class="swatch" style="background:var(--series-revenue)"></span>Vergoeding</span>
+        <span class="legend-item"><span class="legend-dash"></span>Netto</span>
       </div>
     </div>
-    <div class="chart-scroll">
-      <div class="chart-plot" id="chart-plot"></div>
-    </div>
+    <div class="chart-body" id="chart-body"></div>
   </section>
 
   <section class="card table-card">
     <div class="table-head">
-      <h2>Laadsessies</h2>
-      <div class="refresh-group">
-        <button class="ghost-btn" id="reload-btn">Herlaad sessies</button>
-        <span class="refresh-status" id="refresh-status"></span>
-      </div>
+      <h2>Laadsessies <span class="count" id="session-count"></span></h2>
+      <button class="primary-btn" id="add-toggle">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        Sessie toevoegen
+      </button>
     </div>
 
-    <form class="add-form" id="add-form">
+    <form class="add-form" id="add-form" hidden>
       <div class="field-group">
         <label for="f-date">Datum</label>
         <input type="date" id="f-date" required>
@@ -516,9 +488,9 @@
         <label for="f-note">Notitie</label>
         <input type="text" id="f-note" placeholder="optioneel">
       </div>
-      <button type="submit" class="primary-btn">Sessie toevoegen</button>
+      <button type="submit" class="primary-btn">Opslaan</button>
     </form>
-    <p class="help-text">Geen duur bekend? Laat leeg — dan wordt de sessie als één moment ingedeeld op basis van de starttijd (kies bv. 22:00 voor een sessie die je weet dat volledig in het dal viel).</p>
+    <p class="help-text" id="add-help" hidden>Geen duur bekend? Laat leeg — dan wordt de sessie als één moment ingedeeld op basis van de starttijd (kies bv. 22:00 voor een sessie die je weet dat volledig in het dal viel).</p>
 
     <div class="table-scroll">
       <table>
@@ -526,19 +498,17 @@
           <tr>
             <th class="left">Datum</th>
             <th class="left">Start</th>
-            <th>Duur</th>
-            <th>kWh piek</th>
-            <th>kWh dal</th>
-            <th>Kosten</th>
-            <th>Vergoeding</th>
+            <th class="left">Piek / dal</th>
+            <th>kWh</th>
             <th>Netto</th>
-            <th class="left">Notitie</th>
+            <th>Bron</th>
             <th></th>
           </tr>
         </thead>
         <tbody id="table-body"></tbody>
       </table>
     </div>
+    <button class="show-more-btn" id="show-more-btn" hidden></button>
   </section>
 </div>
 
@@ -548,10 +518,12 @@
 (function () {
   const CONFIG_KEY = 'evdash.config.v2';
   const SESSIONS_KEY = 'evdash.sessions.v2';
+  const TABLE_PAGE_SIZE = 8;
 
   const fmtEUR = (n) => new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' }).format(n || 0);
   const fmtKWH = (n) => new Intl.NumberFormat('nl-NL', { minimumFractionDigits: 1, maximumFractionDigits: 2 }).format(n || 0) + ' kWh';
   const fmtDate = (iso) => new Date(iso + 'T00:00:00').toLocaleDateString('nl-NL', { day: '2-digit', month: 'short', year: 'numeric' });
+  const fmtDateShort = (d) => d.toLocaleDateString('nl-NL', { day: '2-digit', month: 'short' });
   const pad2 = (n) => String(n).padStart(2, '0');
 
   function loadConfig() {
@@ -564,13 +536,20 @@
   function saveConfig(cfg) { localStorage.setItem(CONFIG_KEY, JSON.stringify(cfg)); }
 
   // Sessions worden elke 15 min bijgewerkt door een GitHub Actions workflow
-  // (scripts/sync.mjs) die sessions.json schrijft op basis van Home Assistant.
+  // (scripts/sync.mjs) die sessions.json en state.json schrijft op basis van Home Assistant.
   async function fetchSeedSessions() {
     try {
       const res = await fetch('./sessions.json', { cache: 'no-store' });
       if (!res.ok) return [];
       return await res.json();
     } catch (e) { return []; }
+  }
+  async function fetchSyncState() {
+    try {
+      const res = await fetch('./state.json', { cache: 'no-store' });
+      if (!res.ok) return null;
+      return await res.json();
+    } catch (e) { return null; }
   }
 
   async function loadSessions() {
@@ -585,6 +564,19 @@
     return sessions;
   }
   function saveSessions(sessions) { localStorage.setItem(SESSIONS_KEY, JSON.stringify(sessions)); }
+
+  function formatRelative(iso) {
+    if (!iso) return null;
+    const then = new Date(iso).getTime();
+    if (isNaN(then)) return null;
+    const diffMin = Math.round((Date.now() - then) / 60000);
+    if (diffMin < 1) return 'zojuist bijgewerkt';
+    if (diffMin < 60) return 'bijgewerkt ' + diffMin + ' min geleden';
+    const diffH = Math.round(diffMin / 60);
+    if (diffH < 24) return 'bijgewerkt ' + diffH + ' uur geleden';
+    const diffD = Math.round(diffH / 24);
+    return 'bijgewerkt ' + diffD + ' dag' + (diffD === 1 ? '' : 'en') + ' geleden';
+  }
 
   // ---- Peak/off-peak calendar rule ----
   // Mon-Thu 07:00-21:00 peak, Fri 07:00-23:00 peak, Sat/Sun all off-peak.
@@ -633,11 +625,30 @@
     return { ...s, start, peakKwh, dalKwh, cost, revenue, net: revenue - cost };
   }
 
+  function classifySource(s) {
+    const note = (s.note || '').toLowerCase();
+    if (note.includes('handmatig')) return 'manual';
+    if (note.includes('gereconstrueerd')) return 'reconstructed';
+    if (note.includes('automatisch')) return 'auto';
+    if (String(s.id).startsWith('m_')) return 'manual';
+    return 'auto';
+  }
+  const SOURCE_META = {
+    auto: { label: 'Auto', cls: 'auto', title: 'Automatisch gelogd via meterstand' },
+    manual: { label: 'Handmatig', cls: 'manual', title: 'Handmatig toegevoegd' },
+    reconstructed: { label: 'Herleid', cls: 'reconstructed', title: 'Gereconstrueerd uit Home Assistant-geschiedenis' },
+  };
+
   // ---- State ----
   let config = loadConfig();
   let sessions = [];
   let periodPreset = 'month';
   let rangeStart, rangeEnd;
+  let settingsOpen = false;
+  let settingsTouched = false;
+  let addOpen = false;
+  let showAllSessions = false;
+  let syncStateData = null;
 
   function presetRange(preset) {
     const now = new Date();
@@ -647,7 +658,25 @@
     if (preset === 'year') return [new Date(y, 0, 1), new Date(y, 11, 31)];
     return [new Date(2000, 0, 1), new Date(2100, 0, 1)];
   }
+  function previousRange(preset, start) {
+    if (preset === 'month' || preset === 'lastmonth') {
+      const y = start.getFullYear(), m = start.getMonth();
+      return [new Date(y, m - 1, 1), new Date(y, m, 0)];
+    }
+    if (preset === 'year') {
+      const y = start.getFullYear();
+      return [new Date(y - 1, 0, 1), new Date(y - 1, 11, 31)];
+    }
+    return null;
+  }
   function toISO(d) { return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate()); }
+  function periodLabel() {
+    if (periodPreset === 'month') return 'deze maand';
+    if (periodPreset === 'lastmonth') return 'vorige maand';
+    if (periodPreset === 'year') return 'dit jaar';
+    if (periodPreset === 'all') return 'alle periodes';
+    return fmtDateShort(rangeStart) + ' – ' + fmtDateShort(rangeEnd);
+  }
 
   function setPreset(preset) {
     periodPreset = preset;
@@ -656,6 +685,7 @@
     document.getElementById('range-start').value = toISO(s);
     document.getElementById('range-end').value = toISO(e);
     document.querySelectorAll('#preset-buttons button').forEach(b => b.classList.toggle('active', b.dataset.preset === preset));
+    showAllSessions = false;
     render();
   }
 
@@ -667,13 +697,35 @@
     rangeStart = new Date(e.target.value + 'T00:00:00');
     periodPreset = null;
     document.querySelectorAll('#preset-buttons button').forEach(b => b.classList.remove('active'));
+    showAllSessions = false;
     render();
   });
   document.getElementById('range-end').addEventListener('change', (e) => {
     rangeEnd = new Date(e.target.value + 'T00:00:00');
     periodPreset = null;
     document.querySelectorAll('#preset-buttons button').forEach(b => b.classList.remove('active'));
+    showAllSessions = false;
     render();
+  });
+
+  // ---- Settings (tariffs) panel ----
+  const settingsPanel = document.getElementById('settings-panel');
+  const settingsToggleBtn = document.getElementById('settings-toggle');
+  function renderSettingsSummary() {
+    const unset = !config.peak && !config.offpeak && !config.lease;
+    settingsToggleBtn.classList.toggle('unset', unset);
+    document.getElementById('settings-summary').textContent = unset
+      ? 'Vul je tarieven in'
+      : fmtEUR(config.peak) + ' piek · ' + fmtEUR(config.offpeak) + ' dal · ' + fmtEUR(config.lease) + ' lease';
+  }
+  function setSettingsOpen(open) {
+    settingsOpen = open;
+    settingsPanel.hidden = !open;
+    settingsToggleBtn.setAttribute('aria-expanded', String(open));
+  }
+  settingsToggleBtn.addEventListener('click', () => {
+    settingsTouched = true;
+    setSettingsOpen(!settingsOpen);
   });
 
   // ---- Config inputs ----
@@ -683,13 +735,24 @@
     el.addEventListener('input', () => {
       config[key] = parseFloat(el.value) || 0;
       saveConfig(config);
+      renderSettingsSummary();
       render();
     });
   });
 
   // ---- Add session form ----
+  const addToggleBtn = document.getElementById('add-toggle');
+  const addForm = document.getElementById('add-form');
+  const addHelp = document.getElementById('add-help');
+  function setAddOpen(open) {
+    addOpen = open;
+    addForm.hidden = !open;
+    addHelp.hidden = !open;
+  }
+  addToggleBtn.addEventListener('click', () => setAddOpen(!addOpen));
+
   document.getElementById('f-date').value = toISO(new Date());
-  document.getElementById('add-form').addEventListener('submit', (e) => {
+  addForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const s = {
       id: 'm_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8),
@@ -703,27 +766,30 @@
     saveSessions(sessions);
     e.target.reset();
     document.getElementById('f-date').value = toISO(new Date());
+    setAddOpen(false);
     render();
   });
 
-  document.getElementById('reload-btn').addEventListener('click', async () => {
-    const btn = document.getElementById('reload-btn');
-    const status = document.getElementById('refresh-status');
-    btn.disabled = true;
-    status.className = 'refresh-status';
-    status.textContent = 'Verversen…';
+  const reloadBtn = document.getElementById('reload-btn');
+  reloadBtn.addEventListener('click', async () => {
+    reloadBtn.disabled = true;
+    reloadBtn.classList.add('spinning');
     try {
       sessions = await loadSessions();
+      syncStateData = await fetchSyncState();
       render();
-      status.className = 'refresh-status ok';
-      status.textContent = 'Bijgewerkt.';
-    } catch (e) {
-      status.className = 'refresh-status err';
-      status.textContent = 'Verversen mislukt.';
     } finally {
-      btn.disabled = false;
+      reloadBtn.disabled = false;
+      reloadBtn.classList.remove('spinning');
+      renderSyncBadge();
     }
   });
+
+  function renderSyncBadge() {
+    const label = document.getElementById('sync-label');
+    const rel = syncStateData ? formatRelative(syncStateData.lastCheckedAt) : null;
+    label.textContent = rel || 'synchronisatie onbekend';
+  }
 
   let lastDeleted = null, lastDeletedIndex = null, undoTimer = null;
   function deleteSession(id) {
@@ -750,39 +816,105 @@
   }
 
   // ---- Rendering ----
-  function filteredComputed() {
+  function computedInRange(start, end) {
     return sessions
       .map(s => computeSession(s, config))
-      .filter(s => s.start >= rangeStart && s.start <= new Date(rangeEnd.getTime() + 24 * 3600000 - 1))
+      .filter(s => s.start >= start && s.start <= new Date(end.getTime() + 24 * 3600000 - 1))
       .sort((a, b) => b.start - a.start);
   }
+  function filteredComputed() { return computedInRange(rangeStart, rangeEnd); }
 
-  function renderStats(list) {
+  function sumStats(list) {
     const totalKwh = list.reduce((a, s) => a + Number(s.kwh || 0), 0);
     const peakKwh = list.reduce((a, s) => a + s.peakKwh, 0);
     const dalKwh = list.reduce((a, s) => a + s.dalKwh, 0);
     const cost = list.reduce((a, s) => a + s.cost, 0);
     const revenue = list.reduce((a, s) => a + s.revenue, 0);
-    const net = revenue - cost;
-    const peakPct = totalKwh > 0 ? (peakKwh / totalKwh) * 100 : 0;
+    return { totalKwh, peakKwh, dalKwh, cost, revenue, net: revenue - cost };
+  }
 
-    const tiles = [
-      { label: 'Totaal geladen', value: fmtKWH(totalKwh), sub: list.length + ' sessie' + (list.length === 1 ? '' : 's') },
-      { label: 'Piek / dal kWh', value: fmtKWH(peakKwh), sub: fmtKWH(dalKwh) + ' dal', split: peakPct, swatchPeak: true },
-      { label: 'Kosten', value: fmtEUR(cost), swatch: 'var(--series-cost)' },
-      { label: 'Vergoeding', value: fmtEUR(revenue), swatch: 'var(--series-revenue)' },
-      { label: 'Netto resultaat', value: fmtEUR(net), cls: net >= 0 ? 'good' : 'critical' },
-      { label: 'Gem. €/kWh (kosten)', value: totalKwh > 0 ? fmtEUR(cost / totalKwh) : '—' },
-    ];
+  function renderHero(list) {
+    const cur = sumStats(list);
+    const peakPct = cur.totalKwh > 0 ? (cur.peakKwh / cur.totalKwh) * 100 : 0;
 
-    document.getElementById('stat-row').innerHTML = tiles.map(t => `
-      <div class="card stat-tile">
-        <div class="stat-label">${t.swatch ? `<span class="swatch" style="background:${t.swatch}"></span>` : ''}${t.label}</div>
-        <div class="stat-value ${t.cls || ''}">${t.value}</div>
-        ${t.sub ? `<div class="stat-sub">${t.sub}</div>` : ''}
-        ${t.split !== undefined ? `<div class="split-bar"><span style="width:${t.split}%;background:var(--series-peak)"></span><span style="width:${100 - t.split}%;background:var(--series-offpeak)"></span></div>` : ''}
+    let trendHtml = '';
+    const prevBounds = periodPreset ? previousRange(periodPreset, rangeStart) : null;
+    if (prevBounds) {
+      const prevList = computedInRange(prevBounds[0], prevBounds[1]);
+      if (prevList.length > 0) {
+        const prev = sumStats(prevList);
+        let pct = null;
+        if (prev.net !== 0) pct = ((cur.net - prev.net) / Math.abs(prev.net)) * 100;
+        const trendLabel = periodPreset === 'year' ? 'vorig jaar' : 'maand ervoor';
+        if (pct !== null && isFinite(pct)) {
+          const down = pct < 0;
+          const arrow = down
+            ? '<path d="M19 12l-7 7-7-7M12 19V5"/>'
+            : '<path d="M5 12l7-7 7 7M12 5v14"/>';
+          trendHtml = `<span class="hero-trend ${down ? 'down' : ''}">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${arrow}</svg>
+            ${pct >= 0 ? '+' : ''}${pct.toFixed(0)}% vs ${trendLabel}
+          </span>`;
+        }
+      }
+    }
+
+    document.getElementById('hero-row').innerHTML = `
+      <div class="hero-card">
+        <div class="hero-top">
+          <span class="hero-label">Netto resultaat &middot; ${periodLabel()}</span>
+          ${trendHtml}
+        </div>
+        <div class="hero-value ${cur.net < 0 ? 'down' : ''}" style="${cur.net < 0 ? 'color:var(--status-critical)' : ''}">${fmtEUR(cur.net)}</div>
+        <div class="hero-sub">
+          <span>Kosten <b>${fmtEUR(cur.cost)}</b></span>
+          <span>Vergoeding <b>${fmtEUR(cur.revenue)}</b></span>
+        </div>
       </div>
-    `).join('');
+      <div class="card stat-card-sm">
+        <span class="stat-label"><span class="swatch" style="background:var(--series-cost)"></span>Kosten</span>
+        <span class="stat-value">${fmtEUR(cur.cost)}</span>
+        <span class="stat-sub">${fmtKWH(cur.totalKwh)} afgenomen</span>
+      </div>
+      <div class="card stat-card-sm">
+        <span class="stat-label"><span class="swatch" style="background:var(--series-revenue)"></span>Vergoeding</span>
+        <span class="stat-value">${fmtEUR(cur.revenue)}</span>
+        <span class="stat-sub">${fmtEUR(config.lease)} /kWh lease</span>
+      </div>
+    `;
+
+    document.getElementById('tert-row').innerHTML = `
+      <div class="card">
+        <span class="stat-label">Totaal geladen</span>
+        <span class="stat-value">${fmtKWH(cur.totalKwh)}</span>
+        <span class="stat-sub">${list.length} sessie${list.length === 1 ? '' : 's'} ${periodLabel()}</span>
+      </div>
+      <div class="card">
+        <span class="stat-label">Piek / dal verdeling</span>
+        <div class="split-pct-row">
+          <span style="color:var(--series-peak)">${peakPct.toFixed(0)}% piek</span>
+          <span style="color:var(--series-offpeak)">${(100 - peakPct).toFixed(0)}% dal</span>
+        </div>
+        <div class="split-bar"><span style="width:${peakPct}%;background:var(--series-peak)"></span><span style="width:${100 - peakPct}%;background:var(--series-offpeak)"></span></div>
+      </div>
+      <div class="card">
+        <span class="stat-label">Gem. kostprijs</span>
+        <span class="stat-value">${cur.totalKwh > 0 ? fmtEUR(cur.cost / cur.totalKwh) : '—'} /kWh</span>
+        <span class="stat-sub">vs ${fmtEUR(config.lease)} vergoeding</span>
+      </div>
+    `;
+  }
+
+  function niceMax(value) {
+    if (value <= 0) return 10;
+    const magnitude = Math.pow(10, Math.floor(Math.log10(value)));
+    const residual = value / magnitude;
+    let niceResidual;
+    if (residual > 5) niceResidual = 10;
+    else if (residual > 2) niceResidual = 5;
+    else if (residual > 1) niceResidual = 2;
+    else niceResidual = 1;
+    return niceResidual * magnitude;
   }
 
   function renderChart(list) {
@@ -794,18 +926,23 @@
       byMonth[key].revenue += s.revenue;
     });
     const months = Object.values(byMonth).sort((a, b) => a.date - b.date);
-    const plot = document.getElementById('chart-plot');
+    const body = document.getElementById('chart-body');
     if (months.length === 0) {
-      plot.innerHTML = '<p class="empty-note">Geen sessies in deze periode.</p>';
+      body.innerHTML = '<p class="empty-note">Geen sessies in deze periode.</p>';
       return;
     }
-    const max = Math.max(1, ...months.map(m => Math.max(m.cost, m.revenue)));
-    plot.innerHTML = months.map(m => {
+    const rawMax = Math.max(1, ...months.map(m => Math.max(m.cost, m.revenue)));
+    const max = niceMax(rawMax);
+    const axisLabels = [max, max * 0.75, max * 0.5, max * 0.25, 0]
+      .map(v => '<span>' + fmtEUR(v).replace(',00', '') + '</span>').join('');
+    const lastKey = months[months.length - 1].date.getTime();
+    const plot = months.map(m => {
       const net = m.revenue - m.cost;
       const costH = Math.max(2, (m.cost / max) * 140);
       const revH = Math.max(2, (m.revenue / max) * 140);
+      const isCurrent = m.date.getTime() === lastKey;
       return `
-        <div class="month-group">
+        <div class="month-group${isCurrent ? ' current' : ''}">
           <div class="month-net ${net >= 0 ? 'good' : 'critical'}">${fmtEUR(net)}</div>
           <div class="bars">
             <div class="bar cost" style="height:${costH}px" title="Kosten ${fmtEUR(m.cost)}"></div>
@@ -814,40 +951,73 @@
           <div class="month-label">${m.date.toLocaleDateString('nl-NL', { month: 'short', year: '2-digit' })}</div>
         </div>`;
     }).join('');
+    body.innerHTML = `
+      <div class="chart-axis">${axisLabels}</div>
+      <div class="chart-scroll"><div class="chart-plot">${plot}</div></div>
+    `;
   }
 
   function renderTable(list) {
+    document.getElementById('session-count').textContent = list.length ? '· ' + list.length + ' ' + periodLabel() : '';
     const body = document.getElementById('table-body');
+    const showMoreBtn = document.getElementById('show-more-btn');
     if (list.length === 0) {
-      body.innerHTML = '<tr><td colspan="10" class="note">Nog geen sessies in deze periode. Voeg er hierboven een toe.</td></tr>';
+      body.innerHTML = '<tr><td colspan="7" class="note">Nog geen sessies in deze periode. Voeg er hierboven een toe.</td></tr>';
+      showMoreBtn.hidden = true;
       return;
     }
-    body.innerHTML = list.map(s => `
+    const visible = showAllSessions ? list : list.slice(0, TABLE_PAGE_SIZE);
+    body.innerHTML = visible.map(s => {
+      const peakPct = s.kwh > 0 ? (s.peakKwh / Number(s.kwh)) * 100 : 0;
+      const src = SOURCE_META[classifySource(s)];
+      const badgeTitle = s.note ? s.note.replace(/"/g, '&quot;') : src.title;
+      return `
       <tr>
         <td class="left">${fmtDate(s.date)}</td>
-        <td class="left">${s.time}</td>
-        <td>${s.duration ? s.duration + ' min' : '—'}</td>
-        <td>${fmtKWH(s.peakKwh)}</td>
-        <td>${fmtKWH(s.dalKwh)}</td>
-        <td>${fmtEUR(s.cost)}</td>
-        <td>${fmtEUR(s.revenue)}</td>
-        <td class="${s.net >= 0 ? 'good' : 'critical'}">${fmtEUR(s.net)}</td>
-        <td class="left note">${s.note || ''}</td>
-        <td><button class="del-btn" data-id="${s.id}" title="Verwijderen">✕</button></td>
+        <td class="left time-cell">${s.time}${s.duration ? `<span class="duration">${s.duration} min</span>` : ''}</td>
+        <td class="left">
+          <div class="split-cell">
+            <div class="split-bar"><span style="width:${peakPct}%;background:var(--series-peak)"></span><span style="width:${100 - peakPct}%;background:var(--series-offpeak)"></span></div>
+            <span class="split-pct">${peakPct.toFixed(0)}% piek</span>
+          </div>
+        </td>
+        <td>${fmtKWH(Number(s.kwh))}</td>
+        <td class="${s.net >= 0 ? 'good' : 'critical'}" title="Kosten ${fmtEUR(s.cost)} — Vergoeding ${fmtEUR(s.revenue)}">${fmtEUR(s.net)}</td>
+        <td><span class="badge ${src.cls}" title="${badgeTitle}">${src.label}</span></td>
+        <td><button class="del-btn" data-id="${s.id}" aria-label="Sessie verwijderen" title="Verwijderen">✕</button></td>
       </tr>
-    `).join('');
+    `;
+    }).join('');
     body.querySelectorAll('.del-btn').forEach(btn => btn.addEventListener('click', () => deleteSession(btn.dataset.id)));
+
+    if (list.length > TABLE_PAGE_SIZE) {
+      showMoreBtn.hidden = false;
+      showMoreBtn.textContent = showAllSessions ? 'Toon minder' : 'Toon alle ' + list.length + ' sessies';
+    } else {
+      showMoreBtn.hidden = true;
+    }
   }
+
+  document.getElementById('show-more-btn').addEventListener('click', () => {
+    showAllSessions = !showAllSessions;
+    render();
+  });
 
   function render() {
     const list = filteredComputed();
-    renderStats(list);
+    renderHero(list);
     renderChart(list);
     renderTable(list);
   }
 
   (async () => {
+    renderSettingsSummary();
     sessions = await loadSessions();
+    syncStateData = await fetchSyncState();
+    renderSyncBadge();
+    if (!config.peak && !config.offpeak && !config.lease && !settingsTouched) {
+      setSettingsOpen(true);
+    }
     setPreset('month');
   })();
 })();
