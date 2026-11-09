@@ -19,8 +19,8 @@
     --accent-soft: rgba(15,118,110,0.12);
     --series-cost: #2a78d6;
     --series-revenue: #0f8a5f;
-    --series-peak: #d97706;
-    --series-offpeak: #64748b;
+    --series-peak: #0c5a52;
+    --series-offpeak: #a9d6cd;
     --status-good: #0ca30c;
     --status-critical: #d03b3b;
     --grid-line: #e1e0d9;
@@ -52,8 +52,8 @@
       --accent-soft: rgba(45,212,191,0.16);
       --series-cost: #3987e5;
       --series-revenue: #22c55e;
-      --series-peak: #f0a845;
-      --series-offpeak: #94a3b8;
+      --series-peak: #3ee8d1;
+      --series-offpeak: #4f6b67;
       --status-good: #34d15c;
       --status-critical: #e66767;
       --grid-line: #263531;
@@ -77,7 +77,7 @@
     --text-primary: #eef3f1; --text-secondary: #b7c3bf; --text-muted: #7c8985;
     --border: rgba(255,255,255,0.12); --accent: #2dd4bf; --accent-ink: #062723;
     --accent-soft: rgba(45,212,191,0.16); --series-cost: #3987e5; --series-revenue: #22c55e;
-    --series-peak: #f0a845; --series-offpeak: #94a3b8; --status-good: #34d15c;
+    --series-peak: #3ee8d1; --series-offpeak: #4f6b67; --status-good: #34d15c;
     --status-critical: #e66767; --grid-line: #263531;
     --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
     --hero-bg: #17221f; --hero-text: #eef3f1; --hero-dim: #9fada8;
@@ -92,7 +92,7 @@
     --text-primary: #10201d; --text-secondary: #4c5c57; --text-muted: #8a948f;
     --border: rgba(16,32,29,0.12); --accent: #0f766e; --accent-ink: #ffffff;
     --accent-soft: rgba(15,118,110,0.12); --series-cost: #2a78d6; --series-revenue: #0f8a5f;
-    --series-peak: #d97706; --series-offpeak: #64748b; --status-good: #0ca30c;
+    --series-peak: #0c5a52; --series-offpeak: #a9d6cd; --status-good: #0ca30c;
     --status-critical: #d03b3b; --grid-line: #e1e0d9;
     --shadow: 0 1px 2px rgba(16,32,29,0.06), 0 8px 24px rgba(16,32,29,0.05);
     --hero-bg: #10201d; --hero-text: #f3f7f5; --hero-dim: rgba(255,255,255,0.62);
@@ -951,14 +951,14 @@
         <div class="hero-ring-wrap">
           <div class="hero-ring-glow"></div>
           <svg width="148" height="148" viewBox="0 0 148 148" style="position:relative;" aria-hidden="true">
-            <circle cx="74" cy="74" r="${ringR}" stroke="#94a3b8" stroke-width="15" fill="none"/>
-            <circle cx="74" cy="74" r="${ringR}" stroke="#f0a845" stroke-width="15" fill="none" stroke-dasharray="${peakArc.toFixed(1)} ${ringCirc.toFixed(1)}" transform="rotate(-90 74 74)"/>
+            <circle cx="74" cy="74" r="${ringR}" stroke="#4f6b67" stroke-width="15" fill="none"/>
+            <circle cx="74" cy="74" r="${ringR}" stroke="#3ee8d1" stroke-width="15" fill="none" stroke-dasharray="${peakArc.toFixed(1)} ${ringCirc.toFixed(1)}" transform="rotate(-90 74 74)"/>
             <text x="74" y="69" text-anchor="middle" font-size="27" font-weight="800" fill="#ffffff" font-family="-apple-system, sans-serif">${Math.round(peakPct)}%</text>
             <text x="74" y="88" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.5)" font-family="-apple-system, sans-serif">piek</text>
           </svg>
           <div class="hero-ring-legend">
-            <span><span class="dot" style="background:#f0a845"></span>Piek</span>
-            <span><span class="dot" style="background:#94a3b8"></span>Dal</span>
+            <span><span class="dot" style="background:#3ee8d1"></span>Piek</span>
+            <span><span class="dot" style="background:#4f6b67"></span>Dal</span>
           </div>
         </div>
       </div>
