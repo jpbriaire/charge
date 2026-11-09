@@ -258,7 +258,10 @@
   .hero-trend.down { color: #3a0c0c; background: #ff9a9a; box-shadow: 0 0 16px rgba(255,154,154,0.4); }
   .hero-spark-wrap { margin-top: 18px; }
   .hero-spark-caption { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px; }
-  .hero-ring-wrap { display: flex; align-items: center; justify-content: center; position: relative; }
+  .hero-ring-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; gap: 10px; }
+  .hero-ring-legend { display: flex; gap: 14px; font-size: 11.5px; }
+  .hero-ring-legend span { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.55); }
+  .hero-ring-legend .dot { width: 8px; height: 8px; border-radius: 2px; }
   .hero-ring-glow { position: absolute; width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle, rgba(53,224,176,0.35) 0%, transparent 68%); filter: blur(6px); }
   .hero-chips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
   @media (max-width: 480px) { .hero-chips { grid-template-columns: 1fr; } }
@@ -911,11 +914,10 @@
       }
     }
 
-    // Dekkingsring: vergoeding t.o.v. kosten (kan >100% zijn: dan loop je voor).
-    const coveragePct = cur.cost > 0 ? (cur.revenue / cur.cost) * 100 : (cur.revenue > 0 ? 999 : 0);
+    // Piek/dal-donut — dit verschuift wél per periode (i.t.t. een kosten/vergoeding-ratio,
+    // die bij een vast leasetarief nauwelijks beweegt en dus niets vertelt).
     const ringR = 62, ringCirc = 2 * Math.PI * ringR;
-    const ringOffset = ringCirc - Math.min(1, coveragePct / 100) * ringCirc;
-    const coverageLabel = cur.cost > 0 ? Math.round(coveragePct) + '%' : '—';
+    const peakArc = (peakPct / 100) * ringCirc;
 
     // Sparkline: laatste 6 maanden, los van het actieve periodefilter.
     const spark = sparklinePath(lastNMonthsNet(6).map(m => m.net), 230, 50, 4);
@@ -949,17 +951,15 @@
         <div class="hero-ring-wrap">
           <div class="hero-ring-glow"></div>
           <svg width="148" height="148" viewBox="0 0 148 148" style="position:relative;" aria-hidden="true">
-            <defs>
-              <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#9af5d4"/>
-                <stop offset="100%" stop-color="#1fbf8f"/>
-              </linearGradient>
-            </defs>
-            <circle cx="74" cy="74" r="${ringR}" stroke="rgba(255,255,255,0.08)" stroke-width="15" fill="none"/>
-            <circle cx="74" cy="74" r="${ringR}" stroke="url(#ringGrad)" stroke-width="15" fill="none" stroke-linecap="round" stroke-dasharray="${ringCirc.toFixed(1)}" stroke-dashoffset="${ringOffset.toFixed(1)}" transform="rotate(-90 74 74)"/>
-            <text x="74" y="69" text-anchor="middle" font-size="27" font-weight="800" fill="#ffffff" font-family="-apple-system, sans-serif">${coverageLabel}</text>
-            <text x="74" y="88" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.5)" font-family="-apple-system, sans-serif">gedekt</text>
+            <circle cx="74" cy="74" r="${ringR}" stroke="#5b4fcf" stroke-width="15" fill="none"/>
+            <circle cx="74" cy="74" r="${ringR}" stroke="#e8702f" stroke-width="15" fill="none" stroke-dasharray="${peakArc.toFixed(1)} ${ringCirc.toFixed(1)}" transform="rotate(-90 74 74)"/>
+            <text x="74" y="69" text-anchor="middle" font-size="27" font-weight="800" fill="#ffffff" font-family="-apple-system, sans-serif">${Math.round(peakPct)}%</text>
+            <text x="74" y="88" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.5)" font-family="-apple-system, sans-serif">piek</text>
           </svg>
+          <div class="hero-ring-legend">
+            <span><span class="dot" style="background:#e8702f"></span>Piek</span>
+            <span><span class="dot" style="background:#5b4fcf"></span>Dal</span>
+          </div>
         </div>
       </div>
       <div class="hero-chips">
